@@ -1,33 +1,46 @@
-.header{
+.header {
     margin-top: 70px;
     width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center; /* Logoyu dikey olarak ortalamak için eklendi */
+    flex-direction: column; /* İçeriklerin üst üste gelmesini sağlar */
 }
-.header img{
+
+.header img {
     width: 100%;
     height: 450px;
     object-fit: cover;
 }
-.header h1, .header h3{
+
+.header h1, .header h3 {
     position: absolute;
 }
-.header h1{
-    top: -50px;
-    font-family: 'Satisfy', cursive;
-    font-size: 4rem;
-    color: rgb(228, 110, 31);
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px
-    rgba(0, 0, 0, 0.4), 0px 0px 10px rgba(0, 0, 0, 0.6);
+
+.logo-container {
+    position: absolute;
+    top: 10px; /* Logonun üstten konumunu ayarlayın */
+    left: 50%;
+    transform: translateX(-50%);
 }
-.header h3{
-    top: 80px;
+
+.logo {
+    width: 350px !important; /* Logonun genişliğini burada ayarlayabilirsiniz */
+    height: auto !important;
+    max-width: 100% !important; /* Logonun kapsayıcıya sığması için */
+
+}
+
+.header h3 {
+    top: 200px; /* Alt metnin konumunu logoya göre ayarlayın */
     font-family: 'Satisfy', cursive;
     font-size: 2.6rem;
-    text-shadow: 0px 0px 3px rgb(255, 255, 255), 0px 0px 6px
-    rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 3px rgb(255, 255, 255), 
+                 0px 0px 6px rgb(255, 255, 255);
 }
+
 /* Scroll Animation */
 .header{
     transform: translateX(-30px);
